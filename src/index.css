@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(203, 230, 128);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1ch;
+  width: 35ch;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+img {
+  width: 35ch;
+  margin: 1rem;
+
+  box-shadow: 0 0 1rem 2px rgb(16, 85, 7);
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+img:hover {
+  cursor: url(grass.png), pointer;
+}
+
+#controls {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1ch;
+}
+
+button:hover {
+  cursor: pointer;
+}
