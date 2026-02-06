@@ -7,7 +7,7 @@ export default function App() {
   useEffect(() => {
     console.log("nom nom nom");
     console.log("---");
-  });
+  }, [fedCount]);
 
   return (
     <>

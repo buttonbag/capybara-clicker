@@ -25,17 +25,17 @@ const fnC = (n) => {
 };
 ```
 
-1. Is `fnA` pure? Why or why not?
-2. Is `fnB` pure? Why or why not?
-3. Is `fnC` pure? Why or why not?
+1. Is `fnA` pure? Why or why not? Yes there is nothing that changes it
+2. Is `fnB` pure? Why or why not? No because it relies on var outside of function
+3. Is `fnC` pure? Why or why not? relies on outside scope var 
 
 An **effect** is anything that occurs within a function _other than_ the calculation of
 the result, such as making an API call, mutating data in a database, or obtaining user
 input. The effect resulting from any interaction with the world _outside_ of a function
 is referred to as a **side effect**.
 
-4. Which function above has a side effect? What is that side effect?
-5. Why can't a function with side effects be pure?
+4. Which function above has a side effect? What is that side effect? *** fnB, it results from outside of the function ***
+5. Why can't a function with side effects be pure? *** it changes the result ***
 
 > [!NOTE]
 >
@@ -55,17 +55,17 @@ Event handlers allow you to contain side effects that are triggered by a particu
 React provides a **hook** that allows you to specify side effects caused not by an event,
 but rather the act of rendering.
 
-6. What are the two state variables in `<App>`?
-7. What argument is being passed into **`useEffect`**?
+6. What are the two state variables in `<App>`? *** fedCount and petCount ***
+7. What argument is being passed into **`useEffect`**? *** anonymous function with console logs ***
 8. Start the dev server and interact with the page while observing the browser console.
-   What gets logged to the console, and when?
+   What gets logged to the console, and when? *** nom nom nom --- ***
 9. Pass an empty array `[]` as the second argument to `useEffect.` Then, refresh the page
-   and interact with the page again while observing the browser console. What gets logged to the console, and when?
+   and interact with the page again while observing the browser console. What gets logged to the console, and when? *** logs on load, buttons lose effect ***
 10. Put `fedCount` into the **dependency array** of `useEffect`. Refresh the page and
     interact with the page again while observing the browser console. What gets logged to
-    the console, and when?
+    the console, and when? *** feed count logs nom nom nom ***
 11. Write another `useEffect` to log `"yippee!"` to the console whenever `petCount`
-    changes.
+    changes. 
 
 > [!TIP]
 >
